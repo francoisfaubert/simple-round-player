@@ -12,7 +12,7 @@ A simple script that finds audio tags and wraps them with a graphical round play
 Install with Bower or checkout this repository.
 
 ```sh
-    bower install jquery
+    bower install simple-round-player
 ```
 ## How to use
 
