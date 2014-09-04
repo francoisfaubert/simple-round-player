@@ -34,7 +34,6 @@
     ref.find(".progress-pct").show().html("0");
     ref.find(".play-btn").hide();
     ref.find("audio").get(0).play();
-    console.log(ref.find("audio").get(0));
     ref.find("canvas").show();
   }
 
