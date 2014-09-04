@@ -15,11 +15,11 @@
     "jquery": ">=1.7"
   },
   "license": "MIT",
-   "ignore": [
+  "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ],
+  ]
 }
