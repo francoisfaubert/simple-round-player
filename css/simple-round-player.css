@@ -1,0 +1,50 @@
+.simple-round-player {
+    background: #ececec;
+    border: 2px solid #e6e6e6;
+    border-radius: 40px;
+    display: block;
+    position: relative;
+    text-align: center;
+    height: 80px;
+    overflow: hidden;
+    width: 80px;
+}
+
+.simple-round-player canvas {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    height: 62px;
+    width: 62px;
+}
+
+.simple-round-player .play-btn {
+    color:#fff;
+    cursor: pointer;
+    background: #f92833;
+    border:1px solid #fa1325;
+    border-radius: 18px;
+    line-height: 35px;
+    height: 35px;
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    width: 35px;
+}
+
+.simple-round-player .play-btn i {
+    margin-left:4px;
+}
+
+.simple-round-player .progress-pct {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    font-size: 20px;
+    font-style: italic;
+    top: 12px;
+    left: 7px;
+    height: 62px;
+    margin: 14px auto 0;
+    width: 62px;
+}
