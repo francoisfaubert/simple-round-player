@@ -53,6 +53,7 @@
       audioRef.pause();
       audioRef.currentTime = 0;
       activePlayer.find(".progress-pct").hide().html("");
+      activePlayer.find("canvas").hide();
       activePlayer.find(".play-btn").show();
       activePlayer = null;
     }
@@ -99,22 +100,30 @@
         }
       }
 
-      $("audio[data-srp]").wrap(
-         '<div class="simple-round-player">'
-        +'       <canvas></canvas>'
-        +'       <div class="play-btn"><i class="fa fa-play"></i></div>'
-        +'       <div class="progress-pct"></div>'
-        +'    </div>');
+      $("audio[data-srp]").each(function(){
+        var audio = $(this).find("audio"),
+            wrap = null;
 
-      $(".simple-round-player").each(function(){
-        $(this).find("audio").bind('timeupdate', _audio_onProgress.bind(this));
-        $(this).find(".play-btn, .progress-pct").bind('click', _audio_onClick.bind(this));
+        // Ensure this only runs once.
+        if(audio.data("simple-round-player") !== true) {
+          audio.wrap(
+           '<div class="simple-round-player">'
+          +'       <canvas></canvas>'
+          +'       <div class="play-btn"><i class="fa fa-play"></i></div>'
+          +'       <div class="progress-pct"></div>'
+          +'    </div>');
 
-        var $canvas = $(this).find('canvas'),
-            canvas = $canvas.get(0);
+          wrap = audio.parents(".simple-round-player");
+          audio.bind('timeupdate', _audio_onProgress.bind(wrap));
+          audio.data("simple-round-player", true);
 
-        canvas.height = $canvas.height();
-        canvas.width = $canvas.width();
+          wrap.find(".play-btn, .progress-pct").bind('click', _audio_onClick.bind(wrap));
+
+          var $canvas = wrap.find('canvas'),
+              canvas = $canvas.get(0);
+          canvas.height = $canvas.height();
+          canvas.width = $canvas.width();
+        }
       });
     }
   };
