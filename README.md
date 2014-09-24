@@ -36,6 +36,7 @@ Customize the colors of the player using basic CSS. For the progress bar, which 
             containerColor : "#ff0000",
             ringColor : "#00ff00",
             ringProgressColor : "#0000ff",
+            strokeWidth : 6
         });
     });
 ```

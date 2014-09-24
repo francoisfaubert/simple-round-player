@@ -78,7 +78,7 @@
       // Progress container, empty fill with a stroke
       context.beginPath();
       context.arc(centerX, centerY, radius, 0, (pct * 0.02) * Math.PI, false);
-      context.lineWidth = 9;
+      context.lineWidth = STROKE_WIDTH;
       context.strokeStyle = STROKE_PROGRESS_COLOR;
       context.stroke();
   }
@@ -97,6 +97,10 @@
 
         if(config.ringProgressColor) {
           STROKE_PROGRESS_COLOR = config.ringProgressColor;
+        }
+
+        if(config.strokeWidth) {
+          STROKE_WIDTH = config.strokeWidth;
         }
       }
 
