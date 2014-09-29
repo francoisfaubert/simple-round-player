@@ -6,6 +6,7 @@
       CONTAINER_COLOR = '#ececec';
 
   function _audio_onClick(evt) {
+    evt.preventDefault();
     // If an instance is current playing, turn it off.
     // It does not matter which one it was and where it came from.
     if(activePlayer) {
@@ -120,8 +121,7 @@
 
         $(this).find("audio").bind('timeupdate', _audio_onProgress.bind(this));
         $(this).find("audio").data("simple-round-player", true);
-
-        $(this).find(".play-btn, .progress-pct").bind('click', _audio_onClick.bind(this));
+        $(this).bind('click', _audio_onClick.bind(this));
 
         var $canvas = $(this).find('canvas'),
             canvas = $canvas.get(0);
