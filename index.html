@@ -6,23 +6,22 @@
 
         <title>Simple Round Player</title>
 
-        <meta name="description" content="A simple script that finds audio tags and wraps them with a graphical round player interface">
+        <meta name="description" content="A simple script that finds audio tags and wraps them with a graphical round player interface.">
         <meta name="author" content="Francois Faubert">
 
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
         <link rel="stylesheet" href="../css/simple-round-player.css">
 
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="../js/simple-round-player.js"></script>
+        <script src="js/simple-round-player.js"></script>
         <style type="text/css">body { font-family: arial, sans; }</style>
     </head>
 
     <body>
-
         <h1>Simple Round Player.js</h1>
         <p>A simple script that finds audio tags and wraps them with a graphical round player interface</p>
 
@@ -34,25 +33,25 @@
         <h2>Installation</h2>
         <p>Install with Bower or checkout this repository.</p>
 
-        <blockquote><code>bower install jquery</code></blockquote>
+        <blockquote><code>bower install simple-round-player --save</code></blockquote>
 
         <h2>How to use</h2>
         <p>To use, include the javascript file on your page and add a <code>data-srp</code> attribute to any <code>audio</code> tags. Afterwards, launch the script using <code>SimpleRoundPlayer.init();</code></p>
 
-        <blockquote><code>&lt;audio data-srp="true" src="./The Ameoba - Showtime (Intro).mp3"></audio&gt;</code></blockquote>
+        <pre><code>&lt;audio data-srp="true" src="./media/The Ameoba - Showtime (Intro).mp3"></audio&gt;</code></pre>
 
         <p>Customize the colors of the player using basic CSS. For the progress bar, which is rendered in a <code>canvas</code>, you can pass variables as an optional configuration hash :</p>
-        <blockquote><code>
+        <pre><code>
             SimpleRoundPlayer.init({
                 containerColor : "#ff0000",
                 ringColor : "#00ff00",
                 ringProgressColor : "#0000ff",
                 strokeWidth : 6,
             });
-        </code></blockquote>
+        </code></pre>
 
         <h2>Live example</h2>
-        <audio data-srp="true" src="./The Ameoba - Showtime (Intro).mp3"></audio>
+        <audio data-srp="true" src="./media/The Ameoba - Showtime (Intro).mp3"></audio>
         <script>$(function(){ SimpleRoundPlayer.init(); });</script>
 
     </body>
