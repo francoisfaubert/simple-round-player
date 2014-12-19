@@ -123,6 +123,8 @@ h2 { margin-top: 2em; }
 
 pre { padding: 0; margin: 2em auto; }
 
+.row { margin-right: -webkit-calc(20% + (30px * 2)); margin-right: calc(20% + (30px * 2)); margin-bottom: 4em; }
+.row h1 span { font-weight: bold; color: #800; margin-right: 1em; }
 
 /** Syntax highlighting styles */
 .highlight { background: #fff; }
