@@ -53,51 +53,43 @@
             </nav>
 
             <h1><a class="site-title" href="/wordpress-mvc/">Simple Round Player.js</a></h1>
-
         </header>
-
 
         <div class="page-content">
             <div class="post">
 
                 <article class="post-content">
                     <div class="step">
-                        <h1>Simple Round Player.js<</h1>
+                        <h1>Simple Round Player.js</h1>
                         <p class="lead">A simple script that finds audio tags and wraps them with a graphical round player interface.</p>
                     </div>
 
                     <div class="row">
-                        <h2>Requirements</h2>
+                        <h2><span>Requirements</span></h2>
                         <ul>
                             <li>jQuery</li>
                         </ul>
 
-                        <h2>Installation</h2>
+                        <h2><span>Installation</span></h2>
                         <p>Install with Bower or checkout this repository.</p>
 
-<pre><code>
-bower install simple-round-player --save
-</code></pre>
+<pre><code class="bash">bower install simple-round-player --save</code></pre>
 
-                        <h2>How to use</h2>
+                        <h2><span>How to use</span></h2>
                         <p>To use, include the javascript file on your page and add a <code>data-srp</code> attribute to any <code>audio</code> tags. Afterwards, launch the script using <code>SimpleRoundPlayer.init();</code></p>
 
-<pre><code>
-&lt;audio data-srp="true" src="./media/The Ameoba - Showtime (Intro).mp3"&gt;&lt;/audio&gt;
-</code></pre>
+<pre><code class="html">&lt;audio data-srp="true" src="./media/The Ameoba - Showtime (Intro).mp3"&gt;&lt;/audio&gt;</code></pre>
 
-            <p>Customize the colors of the player using basic CSS. For the progress bar, which is rendered in a <code>canvas</code>, you can pass variables as an optional configuration hash :</p>
+                        <p>Customize the colors of the player using basic CSS. For the progress bar, which is rendered in a <code>canvas</code>, you can pass variables as an optional configuration hash :</p>
 
-<pre><code>
-SimpleRoundPlayer.init({
+<pre><code class="js">SimpleRoundPlayer.init({
     containerColor : "#ff0000",
     ringColor : "#00ff00",
     ringProgressColor : "#0000ff",
     strokeWidth : 6,
-});
-</code></pre>
+});</code></pre>
 
-                        <h2>Live example</h2>
+                        <h2><span>Live example</span></h2>
                         <audio data-srp="true" src="./media/The Ameoba - Showtime (Intro).mp3"></audio>
                         <script>$(function(){ SimpleRoundPlayer.init(); });</script>
                     </div>

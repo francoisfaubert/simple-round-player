@@ -117,14 +117,13 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 aside { float: left; margin-left: 30px; width: -webkit-calc(20% + 30px); width: calc(20% + 30px); }
 
-article { margin-left: -webkit-calc(20% + (30px * 2)); margin-left: calc(20% + (30px * 2)); width: -webkit-calc(80% - (30px * 3)); width: calc(80% - (30px * 3)); min-height: 400px; }
+article { margin:auto; width: -webkit-calc(80% - (30px * 3)); width: calc(80% - (30px * 3)); min-height: 400px; }
 
 h2 { margin-top: 2em; }
 
 pre { padding: 0; margin: 2em auto; }
 
-.row { margin-right: -webkit-calc(20% + (30px * 2)); margin-right: calc(20% + (30px * 2)); margin-bottom: 4em; }
-.row h1 span { font-weight: bold; color: #800; margin-right: 1em; }
+h1 span { font-weight: bold; color: #800; margin-right: 1em; }
 
 /** Syntax highlighting styles */
 .highlight { background: #fff; }
