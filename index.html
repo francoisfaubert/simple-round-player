@@ -14,45 +14,63 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <link rel="stylesheet" href="../css/simple-round-player.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 
+
+        <!-- Requirements for the script to work -->
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="js/simple-round-player.js"></script>
+        <link rel="stylesheet" href="css/simple-round-player.css">
+        <!-- / Requirements for the script to work -->
+
         <style type="text/css">body { font-family: arial, sans; }</style>
     </head>
 
     <body>
-        <h1>Simple Round Player.js</h1>
-        <p>A simple script that finds audio tags and wraps them with a graphical round player interface</p>
 
-        <h2>Requirements</h2>
-        <ul>
-            <li>jQuery</li>
-        </ul>
+        <header>
+            <h1>Simple Round Player.js</h1>
+            <p>A simple script that finds audio tags and wraps them with a graphical round player interface</p>
+        </header>
 
-        <h2>Installation</h2>
-        <p>Install with Bower or checkout this repository.</p>
 
-        <blockquote><code>bower install simple-round-player --save</code></blockquote>
+        <article>
+            <h2>Requirements</h2>
+            <ul>
+                <li>jQuery</li>
+            </ul>
 
-        <h2>How to use</h2>
-        <p>To use, include the javascript file on your page and add a <code>data-srp</code> attribute to any <code>audio</code> tags. Afterwards, launch the script using <code>SimpleRoundPlayer.init();</code></p>
+            <h2>Installation</h2>
+            <p>Install with Bower or checkout this repository.</p>
 
-        <pre><code>&lt;audio data-srp="true" src="./media/The Ameoba - Showtime (Intro).mp3"></audio&gt;</code></pre>
+<pre><code>
+bower install simple-round-player --save
+</code></pre>
 
-        <p>Customize the colors of the player using basic CSS. For the progress bar, which is rendered in a <code>canvas</code>, you can pass variables as an optional configuration hash :</p>
-        <pre><code>
-            SimpleRoundPlayer.init({
-                containerColor : "#ff0000",
-                ringColor : "#00ff00",
-                ringProgressColor : "#0000ff",
-                strokeWidth : 6,
-            });
-        </code></pre>
+            <h2>How to use</h2>
+            <p>To use, include the javascript file on your page and add a <code>data-srp</code> attribute to any <code>audio</code> tags. Afterwards, launch the script using <code>SimpleRoundPlayer.init();</code></p>
 
-        <h2>Live example</h2>
-        <audio data-srp="true" src="./media/The Ameoba - Showtime (Intro).mp3"></audio>
-        <script>$(function(){ SimpleRoundPlayer.init(); });</script>
+<pre><code>
+&lt;audio data-srp="true" src="./media/The Ameoba - Showtime (Intro).mp3"&gt;&lt;/audio&gt;
+</code></pre>
 
+            <p>Customize the colors of the player using basic CSS. For the progress bar, which is rendered in a <code>canvas</code>, you can pass variables as an optional configuration hash :</p>
+
+<pre><code>
+SimpleRoundPlayer.init({
+    containerColor : "#ff0000",
+    ringColor : "#00ff00",
+    ringProgressColor : "#0000ff",
+    strokeWidth : 6,
+});
+</code></pre>
+
+            <h2>Live example</h2>
+            <audio data-srp="true" src="./media/The Ameoba - Showtime (Intro).mp3"></audio>
+            <script>$(function(){ SimpleRoundPlayer.init(); });</script>
+
+        </article>
     </body>
 </html>
