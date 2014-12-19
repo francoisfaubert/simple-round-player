@@ -40,3 +40,5 @@ Customize the colors of the player using basic CSS. For the progress bar, which 
         });
     });
 ```
+
+More details and a live example can be found [on the plugin's website](http://francoisfaubert.com/simple-round-player/).
